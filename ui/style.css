@@ -1,6 +1,14 @@
+H1{
+    text-decoration: underline;
+    }
+    
+P {
+    color: grey,
+    }
+    
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: white;
     margin-top: 75px;
 }
 
