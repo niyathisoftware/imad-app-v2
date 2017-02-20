@@ -15,7 +15,7 @@ var articleOne = {
 var htmlTemplate = `
 <html>
   <head>
-    <title>RamaRamaRama</title>
+    <title>${title};</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/ui/style.css" rel="stylesheet" />
 
@@ -28,7 +28,9 @@ var htmlTemplate = `
           <a href="/" >Home</a>
       </div>
       <div> 
-        <P>This is Ramakrishnan</P>
+        <P>${date}</P>
+        <P>${content}</P>
+
       </div>
       </div>
   </body>
