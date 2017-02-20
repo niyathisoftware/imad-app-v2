@@ -12,7 +12,7 @@ var articleOne = {
     content : "This is Ram Kris"
 };
 
-var htmlTemplate = '
+var htmlTemplate = {
 <html>
   <head>
     <title>${title}</title>
@@ -34,7 +34,7 @@ var htmlTemplate = '
       </div>
   </body>
 </html>
-';
+};
 
 
 
