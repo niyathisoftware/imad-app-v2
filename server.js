@@ -12,6 +12,13 @@ var articleOne = {
     content : "This is Ram Kris"
 };
 
+
+function createTemplate (data) {
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+
 var htmlTemplate = `
 <html>
   <head>
@@ -37,7 +44,7 @@ var htmlTemplate = `
 </html>
 `;
 
-
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
