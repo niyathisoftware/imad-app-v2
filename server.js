@@ -43,7 +43,7 @@ var htmlTemplate = `
   </body>
 </html>
 `;
-
+ return htmlTemplate;
 };
 
 app.get('/', function (req, res) {
@@ -51,7 +51,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-oneone', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-oneone.html'));
+  res.send(createTemplate(articleone));
 });
 
 app.get('/article-two', function (req, res) {
