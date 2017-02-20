@@ -12,10 +12,10 @@ var articleOne = {
     content : "This is Ram Kris"
 };
 
-var htmlTemplate = {
+var htmlTemplate = `
 <html>
   <head>
-    <title>${title}</title>
+    <title>RamaRamaRama</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/ui/style.css" rel="stylesheet" />
 
@@ -27,14 +27,13 @@ var htmlTemplate = {
       <div>
           <a href="/" >Home</a>
       </div>
-      <div>
-        <P>${date}</P>
-        <P>${content}</P>
+      <div> 
+        <P>This is Ramakrishnan</P>
       </div>
       </div>
   </body>
 </html>
-};
+`;
 
 
 
