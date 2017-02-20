@@ -5,12 +5,12 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var ArticleOne = {
-    title: : "Ram Test";
-    heading : "Heading";
-    date: "Feb 20, 2017";
+var articleOne = {
+    title : "Ram Test",
+    heading : "Heading",
+    date: "Feb 20, 2017",
     content : "This is Ram Kris"
-}
+};
 
 
 
