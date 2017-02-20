@@ -9,7 +9,7 @@ var ArticleOne = {
     title: : "Ram Test";
     heading : "Heading";
     date: "Feb 20, 2017";
-    content : ""
+    content : "This is Ram Kris"
 }
 
 
