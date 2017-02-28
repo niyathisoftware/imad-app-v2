@@ -15,7 +15,8 @@ button.onClick = function () {
         }
     };
 
-    
+    request.open('GET', 'http://http://niyathisoftware.imad.hasura-app.io/',true);
+    request.send(null);
   
     
 };
