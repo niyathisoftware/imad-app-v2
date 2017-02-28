@@ -1,5 +1,13 @@
 console.log('Loaded!');
 
+var element = document.getElementById('counter');
+var counter = 0;
+button.onClick = function () {
+    counter = counter + 1;
+    var span - document.getElementById('count');
+    span.innerHTML = counter.toString();
+};
+
 var element = document.getElementById('main-text');
 
 element.innerHTML= 'New Value';
