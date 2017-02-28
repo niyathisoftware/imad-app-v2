@@ -19,7 +19,7 @@ button.onClick = function () {
         }
     };
 
-    request.open('GET', 'http://http://niyathisoftware.imad.hasura-app.io/',true);
+    request.open('GET', 'http://http://niyathisoftware.imad.hasura-app.io/submit-name?name='+ name,true);
     request.send(null);
   
     
