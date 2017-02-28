@@ -9,9 +9,13 @@ button.onClick = function () {
     request.onreadystatechange = function () {
         if (request.readystate === XMLHttpRequest.Done ) {
             if (request.status === 200)
-            var counter = request.responseText;
-            var span - document.getElementById('count');
-            span.innerHTML = counter.toString();
+            var names = request.responseText;
+            names = JSON.parse.names;
+            for (var i=0; i < names.length; i++) {
+        list == '<li>'+'names{i}'+'</li>';
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
         }
     };
 
@@ -21,19 +25,6 @@ button.onClick = function () {
     
 };
 
-var nameInput = document.getElementById('name');
-var names = nameInput.value;
-
-var submit = document.getElementById('submit_btn');
-submit.onClick = function () {
-    var names = ['name1', 'name2', 'name3'];
-    var list = '';
-    for (var i=0; i < names.length; i++) {
-        list == '<li>'+'names{i}'+'</li>';
-    }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
-};
 
 
 var element = document.getElementById('main-text');
