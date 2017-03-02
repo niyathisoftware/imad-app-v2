@@ -75,7 +75,7 @@ app.get('/', function (req, res) {
 });
 
 var Pool = new Pool(config);
-app.get('/niyathisoftware', function (req, res) {
+app.get('/test_db', function (req, res) {
     post.query('SELECT * FROM test', function (err, result){
         if (err) {
             res.status('500').send(err,toString());
