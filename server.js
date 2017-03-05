@@ -59,7 +59,7 @@ var htmlTemplate = `
           <a href="/" >Home</a>
       </div>
       <div> 
-        <P>${date}</P>
+        <P>${date.toDateString()}</P>
         <P>${content}</P>
 
       </div>
