@@ -2,6 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
+var crypto = require('crypto');
+
+
 var config = {
     host :'db.imad.hasura-app.io',
     user : 'niyathisoftware',
@@ -73,6 +76,13 @@ var htmlTemplate = `
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+function hash(input, salt) {
+    var hashed = crypto.pbkd2fSync(input, salt, 10000, 512. 'sha512');
+    return ['pbkdf2',10000, salt, hashed.toString('hex')].join('$');
+    
+}
+
 
 var Pool = new Pool(config);
 app.get('/test_db', function (req, res) {
