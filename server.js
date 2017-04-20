@@ -92,7 +92,11 @@ app.get('/create-user', function (req, res) {
     var salt = crypto.getRandomBytes(128).toString('hex');
   var dbString = hash(password, salt);
   pool.query('INSERT INTO"user" (usrname, password) values ($1, $2)' , [username, dbString], function (err,result){
-      
+           if (err) {
+            res.status('500').send(err,toString());
+        } else {
+            res.send('Username successfully created' + username);
+        }        
   });
 });
 
@@ -107,7 +111,8 @@ app.get('/test_db', function (req, res) {
             res.status('500').send(err,toString());
         } else {
             res.send(JSON.Stringigy(result,rows));
-        }
+            
+            }
         
     });
 });
