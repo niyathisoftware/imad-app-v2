@@ -87,8 +87,10 @@ app.get('/hash/:input', function (req, res) {
     var hashedString = hash(req.param.input, 'this-is-some-random-string');
     res.send(hashedString);
 });
-
-app.get('/create-user', function (req, res) {
+app.post('/create-user', function (req, res) {
+  var username = req.body.username;
+  var password = req.body.password;
+  
     var salt = crypto.getRandomBytes(128).toString('hex');
   var dbString = hash(password, salt);
   pool.query('INSERT INTO"user" (usrname, password) values ($1, $2)' , [username, dbString], function (err,result){
